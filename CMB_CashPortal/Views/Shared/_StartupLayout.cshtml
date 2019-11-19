@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "_StartupLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en" class="perfect-scrollbar-on">
+<head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/BImages/favicon-96x96.png">
+    <link rel="icon" type="image/png" href="~/BImages/favicon-96x96.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        CMB Financial Portal
+    </title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="~/BContent/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/BContent/paper-dashboard.min.css" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="~/BContent/demo.css" rel="stylesheet" />
+    <style type="text/css">
+    /* Chart.js */
+    @*@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}*@
+    </style>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/7/util.js"></script>
+</head>
+
+<body class="login-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container">
+            <div class="navbar-wrapper">
+                <div class="navbar-toggle">
+                    <button type="button" class="navbar-toggler">
+                        <span class="navbar-toggler-bar bar1"></span>
+                        <span class="navbar-toggler-bar bar2"></span>
+                        <span class="navbar-toggler-bar bar3"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">CMB Financial Portal</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a href="@Url.Action("Register","Account")" class="nav-link">
+                            <i class="nc-icon nc-book-bookmark"></i> Register
+                        </a>
+                    </li>
+                    <li class="nav-item  active ">
+                        <a href="@Url.Action("Login","Account")" class="nav-link">
+                            <i class="nc-icon nc-tap-01"></i> Login
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper wrapper-full-page ">
+        <div class="full-page section-image" filter-color="black" data-image="../../assets/img/bg/fabio-mangione.jpg">
+            <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+ @RenderBody()
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>, made with <i class="fa fa-heart heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="full-page-background" style="background-image: url(/BImages/fabio-mangione.jpg) "></div>
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="~/BScripts/jquery.min.js"></script>
+    <script src="~/BScripts/popper.min.js"></script>
+    <script src="~/BScripts/bootstrap.min.js"></script>
+    <script src="~/BScripts/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/BScripts/moment.min.js"></script>
+    <script src="~/BScripts/bootstrap-switch.js"></script>
+    <script src="~/BScripts/sweetalert2.min.js"></script>
+    <script src="~/BScripts/jquery.validate.min.js"></script>
+    <script src="~/BScripts/jquery.bootstrap-wizard.js"></script>
+    <script src="~/BScripts/bootstrap-selectpicker.js"></script>
+    <script src="~/BScripts/bootstrap-datetimepicker.js"></script>
+    <script src="~/BScripts/jquery.dataTables.min.js"></script>
+    <script src="~/BScripts/bootstrap-tagsinput.js"></script>
+    <script src="~/BScripts/jasny-bootstrap.min.js"></script>
+    <script src="~/BScripts/fullcalendar.min.js"></script>
+    <script src="~/BScripts/jquery-jvectormap.js"></script>
+    <script src="~/BScripts/nouislider.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <script src="~/BScripts/chartjs.min.js"></script>
+    <script src="~/BScripts/bootstrap-notify.js"></script>
+    <script src="~/BScripts/paper-dashboard.min.js"></script>
+    <script src="~/BScripts/demo.js"></script>
+    <script>
+        $(document).ready(function () {
+            demo.checkFullPageBackgroundImage();
+        });
+    </script>
+
+
+</body>
+</html>

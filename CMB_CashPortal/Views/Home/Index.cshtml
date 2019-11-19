@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "/Views/Shared/_StartupLayout.cshtml";
+}
+
+    <div class="content">
+        <div class="container">
+            <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                <div class="card card-login">
+                    <div class="card-header ">
+                        <div class="card-header ">
+                            <h3 class="header text-center">Welcome to the CMB Financial Portal</h3>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn btn-outline-warning btn-round btn-block mb-3">
+                            @Html.ActionLink("Sign In", "Login", "Account")
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn btn-outline-warning btn-round btn-block mb-3">
+                            @Html.ActionLink("Register", "Register", "Account")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,89 @@
+﻿@model CMB_CashPortal.Models.ExtendedRegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "/Views/Shared/_StartupLayout.cshtml";
+}
+
+
+<div class="content">
+    <div class="container">
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="card card-login">
+                    <div class="card-header ">
+                        <div class="card-header ">
+                            <h3 class="header text-center">Register</h3>
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-single-02"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" name="FirstName" placeholder="First Name...">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-circle-10"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" name="LastName" placeholder="Last Name...">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-spaceship"></i>
+                                </span>
+                            </div>
+                            <input type="file" class="form-control" name="Avatar" placeholder="Avatar...">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-email-85"></i>
+                                </span>
+                            </div>
+                            <input type="email" class="form-control" name="Email" placeholder="Email...">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-key-25"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control" name="Password" placeholder="Password...">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-lock-circle-open"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control" name="ConfirmPassword" placeholder="Confirm Password...">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                    <span class="form-check-sign"></span>
+                                    I agree to the Terms & Conditions
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-warning btn-round btn-block mb-3">Submit</button>
+                    </div>
+             
+                </div>
+            }
+        </div>
+    </div>
+</div>
